@@ -1,0 +1,26 @@
+.PostItem {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  .post-title {
+    margin: 0.8rem 0;
+    a {
+      text-decoration: none;
+      color: black;
+      &:hover {
+        color: #333 !important;
+      }
+      &:visited {
+        color: rebeccapurple;
+      }
+    }
+  }
+
+  .post-create-date {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  .post-desc {
+    font-size: 0.9rem;
+  }
+}

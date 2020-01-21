@@ -7,10 +7,13 @@ exports.createPages = async ({ actions, graphql }) => {
       allMarkdownRemark {
         edges {
           node {
-            html
             frontmatter {
+              path
               title
+              date(formatString: "YYYY-MM-DD HH:mm")
             }
+            html
+            id
           }
         }
       }
@@ -23,10 +26,11 @@ exports.createPages = async ({ actions, graphql }) => {
 
   data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.title,
+      path: node.frontmatter.path,
       context: {
         html: node.html,
         title: String(node.frontmatter.title),
+        date: node.frontmatter.date,
       },
       component: path.resolve(
         __dirname,
