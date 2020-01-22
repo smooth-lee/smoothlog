@@ -16,19 +16,23 @@ react-hot-loader는 코드가 변경되었을때 페이지를 새로고침하지
 
 ## react-hot-loader 설치
 
-    yarn add --dev react-hot-loader
+```bash
+yarn add --dev react-hot-loader
+```
 
 설치가 완료되었다면 package.json에서 babel 부분을 수정하자.
 
-    "babel": {
-        "presets": [
-          "react-app",
-          "mobx"
-        ],
-        "plugins": [
-          "react-hot-loader/babel"
-        ]
-      },
+```js
+"babel": {
+    "presets": [
+      "react-app",
+      "mobx"
+    ],
+    "plugins": [
+      "react-hot-loader/babel"
+    ]
+  },
+```
 
 바뀐점은 plugins를 추가해준 것 이외에 따로 변경한 부분은 없다.
 
@@ -40,20 +44,22 @@ package.json에 babel이 안보인다면 yarn run eject을 해야한다.
 
 설정을 마쳤다면 프로젝트의 최상위 컴포넌트에서 hot을 불러온 뒤 export default `hot(module)(ComponentName)` 형식으로 작성해주기만하면 된다.
 
-    import React from 'react';
-    import { BrowserRouter } from 'react-router-dom';
-    import App from 'components/App';
-    import { hot } from 'react-hot-loader';
+```js
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import App from 'components/App'
+import { hot } from 'react-hot-loader'
 
-    const Root = () => {
-      return (
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      );
-    };
+const Root = () => {
+  return (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  )
+}
 
-    export default hot(module)(Root);
+export default hot(module)(Root)
+```
 
 js 파일을 수정 후에 저장을 눌러보면 기존에 새로고침되던 부분이 이제는 변경된 부분만 알아서 바뀔 것이다.
 

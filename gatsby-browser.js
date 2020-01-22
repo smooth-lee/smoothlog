@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+require('prismjs/themes/prism-okaidia.css')
+// require('prismjs/plugins/command-line/prism-command-line.css')
+require('gatsby-syntax-highlights-dracula')
+// require('gatsby-prismjs-dracula')

@@ -3060,6 +3060,15 @@ cli-width@^2.0.0:
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.2.0.tgz#ff19ede8a9a5e579324147b0c11f0fbcbabed639"
   integrity sha1-/xnt6Kml5XkyQUewwR8PvLq+1jk=
 
+clipboard@^2.0.0:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.4.tgz#836dafd66cf0fea5d71ce5d5b0bf6e958009112d"
+  integrity sha512-Vw26VSLRpJfBofiVaFb/I8PVfdI1OxKcYShe6fm0sP/DtmiWQNCjhM/okTvdCo0G+lMMm1rMYbk4IK4x1X+kgQ==
+  dependencies:
+    good-listener "^1.2.2"
+    select "^1.1.2"
+    tiny-emitter "^2.0.0"
+
 clipboardy@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/clipboardy/-/clipboardy-2.1.0.tgz#0123a0c8fac92f256dc56335e0bb8be97a4909a5"
@@ -4018,6 +4027,11 @@ delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
+
+delegate@^3.1.2:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
+  integrity sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
 
 delegates@^1.0.0:
   version "1.0.0"
@@ -5495,6 +5509,20 @@ gatsby-cli@^2.8.19:
     ink "^2.6.0"
     ink-spinner "^3.0.1"
 
+gatsby-code-buttons-dracula@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-code-buttons-dracula/-/gatsby-code-buttons-dracula-0.1.2.tgz#ec89bc74ca5651b067d021074074850daafe43c8"
+  integrity sha512-83cgXXumgPjHMnlkJFLP8ySrLqn7nFXsvdlUQPN3wM1Ph8bm3cc+SZFgtftlVHaLWl8ahjuIxYHwKs85W0Sdxw==
+  dependencies:
+    node-sass "^4.11.0"
+
+gatsby-code-titles-dracula@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/gatsby-code-titles-dracula/-/gatsby-code-titles-dracula-0.1.3.tgz#8abed31e766cdb0988dac7d60985690d89911e7f"
+  integrity sha512-8FU7Ryit4QW1UXL31mILNuXdBkS0tqTH7Sdn2rnRpzj0o32xj2kLEA2IQoQWMmYxEC0m4BciBf5nuSYfL7Jhjg==
+  dependencies:
+    node-sass "^4.11.0"
+
 gatsby-core-utils@^1.0.22:
   version "1.0.22"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.22.tgz#e246c85db5223906f67251ebb0e4e2e4965d66d7"
@@ -5534,6 +5562,20 @@ gatsby-image@^2.2.34:
     "@babel/runtime" "^7.7.4"
     object-fit-images "^3.2.4"
     prop-types "^15.7.2"
+
+gatsby-line-highlights-dracula@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/gatsby-line-highlights-dracula/-/gatsby-line-highlights-dracula-0.1.3.tgz#bc51c61dadf0de6562f1a784450ef67856793976"
+  integrity sha512-QmfXdn331U+NHP1BONQOfVVjuzSrdiaQWXc+Zz6tXTjO/BwSdT6rEUjKFr9aYW/mT3wINfQwHqQxoXZc+fjeFw==
+  dependencies:
+    node-sass "^4.11.0"
+
+gatsby-line-numbers-dracula@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-line-numbers-dracula/-/gatsby-line-numbers-dracula-0.1.2.tgz#ebb76d989c5815a9f4331eb69bbba3c28b610810"
+  integrity sha512-09vmycgeuHTl6mm822SZo7Y8tJI7hnDWpbI6XpZgiZrvPlvWAjUYJqQvP9g9ksHUflZKr1hZudl3lUsN8WYrRQ==
+  dependencies:
+    node-sass "^4.11.0"
 
 gatsby-link@^2.2.27:
   version "2.2.27"
@@ -5647,6 +5689,18 @@ gatsby-plugin-typescript@^2.1.26:
     "@babel/runtime" "^7.7.6"
     babel-plugin-remove-graphql-queries "^2.7.22"
 
+gatsby-prismjs-dracula@^0.1.15:
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/gatsby-prismjs-dracula/-/gatsby-prismjs-dracula-0.1.15.tgz#ec665f46fafa2292caaa2d51237988eea80bd227"
+  integrity sha512-3IrIZaMXTsj+AqHjGSFr2t1h+VfYAPLQM2Bmd3UruASW9jJjTPMD9RtDaASi8Xb8ahu2XCA2u5FWIqG++J15bg==
+  dependencies:
+    gatsby-code-buttons-dracula "^0.1.2"
+    gatsby-code-titles-dracula "^0.1.3"
+    gatsby-line-highlights-dracula "^0.1.3"
+    gatsby-line-numbers-dracula "^0.1.2"
+    gatsby-syntax-highlights-dracula "^0.1.5"
+    node-sass "^4.11.0"
+
 gatsby-react-router-scroll@^2.1.19:
   version "2.1.19"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.1.19.tgz#4bac8cb5aaba5e2ad6b589a3d289d39257c3b5da"
@@ -5655,6 +5709,15 @@ gatsby-react-router-scroll@^2.1.19:
     "@babel/runtime" "^7.7.6"
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
+
+gatsby-remark-prismjs@^3.3.30:
+  version "3.3.30"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.3.30.tgz#990203b5d174af9a609e32019a3b62cd5dc16332"
+  integrity sha512-DFcFAcvYHmx9FM5P/CRkCbQH4nSPmZ9DRaocAUxH7ZJtF2nMGYp1suYa8BEJKmM/EwvFxLdGoRoN+5FzO56qZQ==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+    parse-numeric-range "^0.0.2"
+    unist-util-visit "^1.4.1"
 
 gatsby-source-filesystem@^2.1.40:
   version "2.1.40"
@@ -5676,6 +5739,13 @@ gatsby-source-filesystem@^2.1.40:
     read-chunk "^3.2.0"
     valid-url "^1.0.9"
     xstate "^4.6.7"
+
+gatsby-syntax-highlights-dracula@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/gatsby-syntax-highlights-dracula/-/gatsby-syntax-highlights-dracula-0.1.5.tgz#39f30db12109bcb28cbe8b4376f5eada173bc42f"
+  integrity sha512-DTD9AbbrMpPJ78R1cHZCbeIUKIoMuyhA4aPxtKe7HPLRE3774TxOVe0OEvqT3srAyLn+alIUe2EQsX2kzZXPpg==
+  dependencies:
+    node-sass "^4.11.0"
 
 gatsby-telemetry@^1.1.44:
   version "1.1.44"
@@ -6122,6 +6192,13 @@ globule@^1.0.0:
     lodash "~4.17.10"
     minimatch "~3.0.2"
 
+good-listener@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
+  integrity sha1-1TswzfkxPf+33JoNR3CWqm0UXFA=
+  dependencies:
+    delegate "^3.1.2"
+
 got@8.3.2, got@^8.3.1, got@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/got/-/got-8.3.2.tgz#1d23f64390e97f776cac52e5b936e5f514d2e937"
@@ -6493,6 +6570,11 @@ hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
+
+highlight.js@^9.18.0:
+  version "9.18.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.0.tgz#6b1763cfcd53744313bd3f31f1210f7beb962c79"
+  integrity sha512-A97kI1KAUzKoAiEoaGcf2O9YPS8nbDTCRFokaaeBhnqjQTvbAuAJrQMm21zw8s8xzaMtCQBtgbyGXLGxdxQyqQ==
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -8705,7 +8787,7 @@ node-releases@^1.1.42:
   dependencies:
     semver "^6.3.0"
 
-node-sass@^4.13.1:
+node-sass@^4.11.0, node-sass@^4.13.1:
   version "4.13.1"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.13.1.tgz#9db5689696bb2eec2c32b98bfea4c7a2e992d0a3"
   integrity sha512-TTWFx+ZhyDx1Biiez2nB0L3YrCZ/8oHagaDalbuBSlqXgUPsdkUSzJsVxeDO9LtPB49+Fh3WQl3slABo6AotNw==
@@ -9384,6 +9466,11 @@ parse-latin@^4.0.0:
     nlcst-to-string "^2.0.0"
     unist-util-modify-children "^1.0.0"
     unist-util-visit-children "^1.0.0"
+
+parse-numeric-range@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/parse-numeric-range/-/parse-numeric-range-0.0.2.tgz#b4f09d413c7adbcd987f6e9233c7b4b210c938e4"
+  integrity sha1-tPCdQTx6282Yf26SM8e0shDJOOQ=
 
 parse-passwd@^1.0.0:
   version "1.0.0"
@@ -10069,6 +10156,13 @@ pretty-error@^2.1.1:
   dependencies:
     renderkid "^2.0.1"
     utila "~0.4"
+
+prismjs@^1.19.0:
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.19.0.tgz#713afbd45c3baca4b321569f2df39e17e729d4dc"
+  integrity sha512-IVFtbW9mCWm9eOIaEkNyo2Vl4NnEifis2GQ7/MLRG5TQe6t+4Sj9J5QWI9i3v+SS43uZBlCAOn+zYTVYQcPXJw==
+  optionalDependencies:
+    clipboard "^2.0.0"
 
 private@^0.1.6:
   version "0.1.8"
@@ -11095,6 +11189,11 @@ select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
   integrity sha1-Yl2GWPhlr0Psliv8N2o3NZpJlMo=
+
+select@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
+  integrity sha1-DnNQrN7ICxEIUoeG7B1EGNEbOW0=
 
 selfsigned@^1.10.7:
   version "1.10.7"
@@ -12182,6 +12281,11 @@ timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
+
+tiny-emitter@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
+  integrity sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
 
 tinycolor2@^1.4.1:
   version "1.4.1"
