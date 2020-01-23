@@ -19,7 +19,7 @@ const PostTemplate = React.memo(props => {
         <h1 className="post-head-title">{title}</h1>
         <h2 className="post-date">{date}</h2>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        {process.env === 'production' && (
+        {process.env.NODE_ENV === 'production' && (
           <React.Fragment>
             <CommentCount config={disqusConfig} placeholder={'...'} />
             <Disqus config={disqusConfig} />
