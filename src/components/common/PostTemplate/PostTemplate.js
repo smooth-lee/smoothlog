@@ -6,13 +6,12 @@ import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 
 const PostTemplate = React.memo(props => {
   const { title, date, html, id } = props.pageContext
-  const { origin, pathname } = window.location
+  const { origin, pathname } = props.location
   let disqusConfig = {
     url: `${origin + pathname}`,
     identifier: id,
     title: title,
   }
-  console.log()
   return (
     <Layout>
       <SEO title={title} />
