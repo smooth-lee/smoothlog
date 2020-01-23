@@ -31,6 +31,7 @@ exports.createPages = async ({ actions, graphql }) => {
         html: node.html,
         title: String(node.frontmatter.title),
         date: node.frontmatter.date,
+        id: node.id,
       },
       component: path.resolve(
         __dirname,

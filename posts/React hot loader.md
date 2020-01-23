@@ -1,6 +1,6 @@
 ---
-path: /react-hot-loader
-title: React-hot-loader
+path: /react-hot-loader-사용하기
+title: React-hot-loader 사용하기
 date: '2020-01-21 10:32'
 ---
 

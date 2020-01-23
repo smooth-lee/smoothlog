@@ -8,7 +8,7 @@ const PostList = () => {
   return (
     <ul className="PostList">
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <PostItem node={node} />
+        <PostItem key={node.id} node={node} />
       ))}
     </ul>
   )
