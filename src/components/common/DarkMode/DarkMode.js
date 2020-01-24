@@ -6,12 +6,16 @@ import { IoMdSunny, IoMdMoon } from 'react-icons/io'
 
 const DarkMode = () => {
   const darkMode = useDarkMode(false)
+  let isDarkMode
+  if (localStorage !== undefined) {
+    isDarkMode = localStorage.getItem('darkMode')
+  }
   return (
     <div className="DarkMode">
       <label htmlFor="dark-mode-switch">
         <IoMdSunny />
         <Switch
-          checked={darkMode.value || localStorage.getItem('darkMode')}
+          checked={darkMode ? darkMode.value : isDarkMode}
           onChange={darkMode.toggle}
           onColor="#86d3ff"
           onHandleColor="#2693e6"
