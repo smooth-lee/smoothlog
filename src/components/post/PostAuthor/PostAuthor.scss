@@ -1,0 +1,30 @@
+.PostAuthor {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  .author-image {
+    img {
+      display: block;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .author-desc {
+    margin-left: 0.6rem;
+    .author-name {
+      font-size: 0.9rem;
+    }
+
+    .post-date {
+      margin-top: -0.3rem;
+      span {
+        font-size: 0.7rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

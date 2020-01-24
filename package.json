@@ -5,15 +5,20 @@
   "version": "0.1.0",
   "author": "SeungWoo Lee <smoothlee7104@gmail.com>",
   "dependencies": {
+    "@raae/gatsby-remark-oembed": "^0.1.1",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-disqus": "^1.1.4",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sass": "^2.1.27",
-    "gatsby-plugin-sharp": "^2.3.5",
+    "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-plugin-typescript": "^2.1.26",
+    "gatsby-remark-copy-linked-files": "^2.1.36",
+    "gatsby-remark-images": "^3.1.42",
+    "gatsby-remark-images-medium-zoom": "^1.4.0",
     "gatsby-remark-prismjs": "^3.3.30",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-syntax-highlights-dracula": "^0.1.5",
@@ -25,7 +30,10 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.8.0",
+    "react-switch": "^5.0.1",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1",

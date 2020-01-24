@@ -1,7 +1,7 @@
 ---
 path: /jenkins-사용하기
 title: Jenkins 사용하기
-date: '2020-01-24 23:58'
+date: '2020-01-24'
 ---
 
 # Jenkins
@@ -64,7 +64,7 @@ Jenkins를 사용하려면 Java가 깔려있어야한다.
 
     HTTP_PORT=8080 부분을 원하는 포트로 변경 후 저장해주면 된다.
 
-그 다음 Jenkins 서버를 시작했다면 http://{서버 IP 주소}:{jenkins 서버 Port}를 입력하고 사이트에 들어간다. 처음 접속 시에는 admin password를 입력해야하기 때문에
+그 다음 Jenkins 서버를 시작했다면 `http://{서버 IP 주소}:{jenkins 서버 Port}`를 입력하고 사이트에 들어간다. 처음 접속 시에는 admin password를 입력해야하기 때문에
 
 ![Jenkins/Untitled.png](Jenkins/Untitled.png)
 
@@ -72,17 +72,17 @@ Jenkins를 사용하려면 Java가 깔려있어야한다.
 
 후에 표시된 값을 복붙하여 로그인한다.
 
-![Jenkins/Untitled%201.png](Jenkins/Untitled%201.png)
+![Jenkins/Untitled%201.png](Jenkins/Untitled-1.png)
 
-![Jenkins/Untitled%202.png](Jenkins/Untitled%202.png)
+![Jenkins/Untitled%202.png](Jenkins/Untitled-2.png)
 
 왼쪽 추천 플러그인 설치를 누른 후 설치 완료까지 대기한다.
 
-![Jenkins/Untitled%203.png](Jenkins/Untitled%203.png)
+![Jenkins/Untitled%203.png](Jenkins/Untitled-3.png)
 
 그 다음 관리자 계정을 생성한다.
 
-![Jenkins/Untitled%204.png](Jenkins/Untitled%204.png)
+![Jenkins/Untitled%204.png](Jenkins/Untitled-4.png)
 
 jenkins URL을 입력한 후 Save and Finish를 누른다. 여기는 나중에 정할 수도 있으므로 Not now를 눌러 건너뛸 수도 있다. 나는 DNS를 사용할 수도 있기에 우선 건너뛰었다.
 
@@ -94,23 +94,23 @@ jenkins URL을 입력한 후 Save and Finish를 누른다. 여기는 나중에 �
 
 젠킨스 메인 화면에서 `New Item` 메뉴를 선택하고, `Freestyle Project` 를 선택한 다음 아이템 명을 입력한다. 나는 github project와 이름을 동일하게 지어주었다.
 
-![Jenkins/Untitled%205.png](Jenkins/Untitled%205.png)
+![Jenkins/Untitled%205.png](Jenkins/Untitled-5.png)
 
 그 다음 Github project를 체크하고 프로젝트 URL을 넣는다.
 
 `[https://github.com/유저네임/프로젝트명](https://github.com/유저네임/프로젝트명)` 이다.
 
-![Jenkins/Untitled%206.png](Jenkins/Untitled%206.png)
+![Jenkins/Untitled%206.png](Jenkins/Untitled-6.png)
 
-그 다음 소스 코드 관리 태베서 `Git` 을 선택하고 Repository URL에는 clonse에 쓰이는 URL을 넣는다.
+그 다음 소스 코드 관리 탭에서 `Git` 을 선택하고 Repository URL에는 clonse에 쓰이는 URL을 넣는다.
 
-[`https://github.com/유저네임/](https://github.com/유저네임/프로젝트명)프로젝트명.git` 이다.
+`https://github.com/유저네임/프로젝트명.git` 이다.
 
-![Jenkins/Untitled%207.png](Jenkins/Untitled%207.png)
+![Jenkins/Untitled%207.png](Jenkins/Untitled-7.png)
 
 그리고 Credentials에는 Add를 눌러서 username에는 계정 이메일이 아닌, 닉네임을 넣어주고 password에는 비밀번호를 누르고 ID는 구분만 하면 되기 때문에 대충 넣어준다.
 
-![Jenkins/Untitled%208.png](Jenkins/Untitled%208.png)
+![Jenkins/Untitled%208.png](Jenkins/Untitled-8.png)
 
 그리고 저장을 해준다.
 

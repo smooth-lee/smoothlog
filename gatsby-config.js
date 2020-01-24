@@ -5,6 +5,13 @@ module.exports = {
     author: `@smoothlee7104`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: ['Nanum Myeongjo'],
+        display: 'swap',
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -45,6 +52,38 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `@raae/gatsby-remark-oembed`,
+            options: {
+              // usePrefix defaults to false
+              // usePrefix: true is the same as ["oembed"]
+              usePrefix: ['oembed', 'video'],
+              providers: {
+                // Important to exclude providers
+                // that adds js to the page.
+                // If you do not need them.
+                exclude: ['Reddit'],
+              },
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`,
+            options: {
+              margin: 36,
+              scrollOffset: 0,
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {

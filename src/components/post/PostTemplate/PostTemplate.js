@@ -3,6 +3,8 @@ import Layout from '../../layout'
 import SEO from '../../seo'
 import './PostTemplate.scss'
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
+import { PostAuthor } from '../PostAuthor'
+import { MarkdownRender } from '../../common/MarkdownRender'
 
 const PostTemplate = React.memo(props => {
   const { title, date, html, id } = props.pageContext
@@ -15,10 +17,11 @@ const PostTemplate = React.memo(props => {
   return (
     <Layout>
       <SEO title={title} />
+
       <div className="PostTemplate">
         <h1 className="post-head-title">{title}</h1>
-        <h2 className="post-date">{date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <PostAuthor postDate={date} />
+        <MarkdownRender html={html} />
         {process.env.NODE_ENV === 'production' && (
           <React.Fragment>
             <CommentCount config={disqusConfig} placeholder={'...'} />

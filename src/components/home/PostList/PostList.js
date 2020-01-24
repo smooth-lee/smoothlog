@@ -22,7 +22,7 @@ const PostListQuery = graphql`
           frontmatter {
             path
             title
-            date(formatString: "YYYY-MM-DD HH:mm")
+            date(formatString: "MMM DD YYYY")
           }
           html
           id
