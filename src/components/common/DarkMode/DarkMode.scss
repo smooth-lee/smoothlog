@@ -5,6 +5,34 @@
   }
   .react-switch {
     vertical-align: middle;
-    margin-right: 0.3rem;
+    margin-left: 0.1rem;
   }
+}
+
+body.dark-mode {
+  /* background-color: #1a1919; */
+  color: #eee;
+  background-color: #282c35;
+  text-shadow: 0 0 0.1px hsla(0, 0%, 100%, 0.3);
+  transition: background-color 0.3s ease;
+  hr {
+    background: #eee;
+  }
+  pre[class*='language-'] {
+    background: #212121;
+    code[class*='language-'] {
+      background: initial;
+    }
+  }
+  .medium-zoom-overlay {
+    background-color: #282c35;
+  }
+  .footer a {
+    color: #fff;
+  }
+}
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
 }

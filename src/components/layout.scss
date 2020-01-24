@@ -210,30 +210,6 @@ body {
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
 
-body.dark-mode {
-  /* background-color: #1a1919; */
-  color: #eee;
-  background-color: #282c35;
-  text-shadow: 0 0 0.1px hsla(0, 0%, 100%, 0.3);
-  transition: background-color 0.3s ease;
-  hr {
-    background: #eee;
-  }
-  pre[class*='language-'] {
-    background: #212121;
-    code[class*='language-'] {
-      background: initial;
-    }
-  }
-  .medium-zoom-overlay {
-    background-color: #282c35;
-  }
-}
-body.light-mode {
-  background-color: #fff;
-  color: #333;
-  transition: background-color 0.3s ease;
-}
 img {
   max-width: 100%;
   margin-left: 0;
@@ -647,6 +623,17 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: '';
+}
+
+.footer {
+  padding-top: 52px;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  a {
+    color: #333;
+    text-decoration: none !important;
+  }
 }
 @media only screen and (max-width: 480px) {
   html {
