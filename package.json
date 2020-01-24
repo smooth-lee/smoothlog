@@ -20,6 +20,7 @@
     "gatsby-remark-images": "^3.1.42",
     "gatsby-remark-images-medium-zoom": "^1.4.0",
     "gatsby-remark-prismjs": "^3.3.30",
+    "gatsby-remark-reading-time": "^1.1.0",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-syntax-highlights-dracula": "^0.1.5",
     "gatsby-transformer-remark": "^2.6.48",
