@@ -11,7 +11,7 @@ const DarkMode = () => {
       <label htmlFor="dark-mode-switch">
         <IoMdSunny />
         <Switch
-          checked={darkMode.value}
+          checked={darkMode.value || localStorage.getItem('darkMode')}
           onChange={darkMode.toggle}
           onColor="#86d3ff"
           onHandleColor="#2693e6"
