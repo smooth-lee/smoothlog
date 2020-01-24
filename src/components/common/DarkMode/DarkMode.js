@@ -7,7 +7,7 @@ import { IoMdSunny, IoMdMoon } from 'react-icons/io'
 const DarkMode = () => {
   const darkMode = useDarkMode(false)
   let isDarkMode
-  if (localStorage !== undefined) {
+  if (typeof localStorage !== 'undefined') {
     isDarkMode = localStorage.getItem('darkMode')
   }
   return (
