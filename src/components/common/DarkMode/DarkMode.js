@@ -20,7 +20,7 @@ const DarkMode = () => {
       <label htmlFor="dark-mode-switch">
         <IoMdSunny />
         <Switch
-          checked={darkMode.value}
+          checked={darkMode !== undefined ? darkMode.value : isDarkMode}
           onChange={darkMode.toggle}
           onColor="#86d3ff"
           onHandleColor="#2693e6"
