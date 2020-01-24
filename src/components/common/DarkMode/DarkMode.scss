@@ -33,6 +33,11 @@ body.dark-mode {
   .footer a {
     color: #fff;
   }
+  .DarkMode {
+    svg {
+      color: rgb(240, 240, 69);
+    }
+  }
 }
 body.light-mode {
   background-color: #fff;

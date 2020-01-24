@@ -6,10 +6,11 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: ['Nanum Myeongjo'],
-        display: 'swap',
+        google: {
+          families: ['Nanum Myeongjo', 'Noto Sans KR'],
+        },
       },
     },
     `gatsby-plugin-sass`,
