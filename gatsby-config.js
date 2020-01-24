@@ -5,6 +5,7 @@ module.exports = {
     author: `@smoothlee7104`,
   },
   plugins: [
+    `gatsby-plugin-use-dark-mode`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {

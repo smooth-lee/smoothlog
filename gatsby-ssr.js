@@ -10,9 +10,9 @@ const React = require('react')
 exports.onRenderBody = ({ setPreBodyComponents }) => {
   setPreBodyComponents([
     <script
+      key="1"
       dangerouslySetInnerHTML={{
-        __html: `
-       (function() {
+        __html: `(function() {
         var classNameDark = 'dark-mode';
         var classNameLight = 'light-mode';
 
@@ -50,8 +50,7 @@ exports.onRenderBody = ({ setPreBodyComponents }) => {
           var isDarkMode = document.body.classList.contains(classNameDark);
           localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
         }
-      })();
-     `,
+      })();`,
       }}
     />,
   ])
