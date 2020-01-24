@@ -5,7 +5,7 @@ import Switch from 'react-switch'
 import { IoMdSunny, IoMdMoon } from 'react-icons/io'
 
 const DarkMode = () => {
-  let darkMode = useDarkMode(false)
+  const darkMode = useDarkMode(false)
   return (
     <div className="DarkMode">
       <label htmlFor="dark-mode-switch">
