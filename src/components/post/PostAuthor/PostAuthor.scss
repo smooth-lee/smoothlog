@@ -19,11 +19,16 @@
       font-size: 0.9rem;
     }
 
-    .post-date {
-      margin-top: -0.3rem;
-      span {
-        font-size: 0.7rem;
+    .author-post-date-info {
+      margin-top: -0.2rem;
+      font-size: 0.7rem;
+      .author-post-date {
         font-weight: 600;
+        margin-right: 0.2rem;
+      }
+      .author-post-reading-time {
+        color: #aaa;
+        margin-left: 0.2rem;
       }
     }
   }

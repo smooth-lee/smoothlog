@@ -7,7 +7,7 @@ import { PostAuthor } from '../PostAuthor'
 import { MarkdownRender } from '../../common/MarkdownRender'
 
 const PostTemplate = React.memo(props => {
-  const { title, date, html, id } = props.pageContext
+  const { title, date, html, id, readingTime } = props.pageContext
   const { origin, pathname } = props.location
   let disqusConfig = {
     url: `${origin + pathname}`,
@@ -20,7 +20,7 @@ const PostTemplate = React.memo(props => {
 
       <div className="PostTemplate">
         <h1 className="post-head-title">{title}</h1>
-        <PostAuthor postDate={date} />
+        <PostAuthor postDate={date} readingTime={readingTime} />
         <MarkdownRender html={html} />
         {process.env.NODE_ENV === 'production' && (
           <React.Fragment>

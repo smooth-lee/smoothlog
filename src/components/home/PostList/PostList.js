@@ -27,6 +27,11 @@ const PostListQuery = graphql`
           html
           id
           excerpt(pruneLength: 200, truncate: true)
+          fields {
+            readingTime {
+              text
+            }
+          }
         }
       }
     }

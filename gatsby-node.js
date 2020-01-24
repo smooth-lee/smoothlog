@@ -14,6 +14,11 @@ exports.createPages = async ({ actions, graphql }) => {
             }
             html
             id
+            fields {
+              readingTime {
+                text
+              }
+            }
           }
         }
       }
@@ -32,6 +37,7 @@ exports.createPages = async ({ actions, graphql }) => {
         title: String(node.frontmatter.title),
         date: node.frontmatter.date,
         id: node.id,
+        readingTime: node.fields.readingTime.text,
       },
       component: path.resolve(
         __dirname,
