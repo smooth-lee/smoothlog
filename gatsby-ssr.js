@@ -6,13 +6,13 @@
 
 // You can delete this file if you're not using it
 
-// const React = require('react')
-// exports.onRenderBody = ({ setHeadComponents }) => {
-//   setHeadComponents([
-//     <script
-//       key="1"
-//       type="text/javascript"
-//       src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"
-//     />,
-//   ])
-// }
+const React = require('react')
+exports.onRenderBody = ({ setHeadComponents }) => {
+  setHeadComponents([
+    <script
+      key="1"
+      type="text/javascript"
+      src="https://raw.githubusercontent.com/donavon/use-dark-mode/develop/noflash.js.txt"
+    />,
+  ])
+}
