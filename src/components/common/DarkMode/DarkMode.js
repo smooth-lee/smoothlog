@@ -5,8 +5,7 @@ import Switch from 'react-switch'
 import { IoMdSunny, IoMdMoon } from 'react-icons/io'
 
 const DarkMode = () => {
-  let darkMode,
-    isDarkMode = false
+  let darkMode, isDarkMode
   if (typeof localStorage !== 'undefined') {
     if (localStorage.getItem('darkMode') === 'true') {
       isDarkMode = true
@@ -14,13 +13,13 @@ const DarkMode = () => {
       isDarkMode = false
     }
   }
-  darkMode = useDarkMode(isDarkMode)
+  darkMode = useDarkMode(isDarkMode || false)
   return (
     <div className="DarkMode">
       <label htmlFor="dark-mode-switch">
         <IoMdSunny />
         <Switch
-          checked={darkMode !== undefined ? darkMode.value : isDarkMode}
+          checked={darkMode.value}
           onChange={darkMode.toggle}
           onColor="#86d3ff"
           onHandleColor="#2693e6"
