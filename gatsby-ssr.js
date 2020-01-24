@@ -7,8 +7,8 @@
 // You can delete this file if you're not using it
 
 const React = require('react')
-exports.onRenderBody = ({ setHeadComponents }) => {
-  setHeadComponents([
+exports.onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents([
     <script
       key="1"
       type="text/javascript"
