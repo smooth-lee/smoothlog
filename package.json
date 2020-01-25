@@ -1,7 +1,7 @@
 {
   "name": "smoothlog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "소통하며 서로 배우는 공간, smoothlog",
   "version": "0.1.0",
   "author": "SeungWoo Lee <smoothlee7104@gmail.com>",
   "dependencies": {

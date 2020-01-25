@@ -67,6 +67,7 @@ body.light-mode {
   transition: background-color 0.3s ease;
 }
 
+//모바일 환경이 아닌 디바이스에서만 Hover가 적용되도록 함
 @media only screen and (min-width: 768px) {
   .DarkMode {
     svg {
