@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 const src = 'https://utteranc.es/client.js'
 const branch = 'master'
 
-export const Comments = ({ repo }) => {
+export const Comments = ({ repo, id }) => {
   const rootElm = React.createRef()
   // const darkMode = useDarkMode(false)
   // let theme = darkMode.value ? 'photon-dark' : 'github-light'
@@ -15,7 +15,7 @@ export const Comments = ({ repo }) => {
       repo,
       branch,
       async: true,
-      'issue-term': 'pathname',
+      'issue-term': id,
       crossorigin: 'anonymous',
       theme: 'github-light',
     }
