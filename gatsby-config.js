@@ -5,7 +5,15 @@ module.exports = {
     author: `@smoothlee7104`,
   },
   plugins: [
-    `gatsby-plugin-use-dark-mode`,
+    {
+      resolve: 'gatsby-plugin-use-dark-mode',
+      options: {
+        classNameDark: 'dark-mode',
+        classNameLight: 'light-mode',
+        storageKey: 'darkMode',
+        minify: true,
+      },
+    },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
