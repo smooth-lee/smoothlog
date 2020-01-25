@@ -25,12 +25,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: `smoothlog`,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
