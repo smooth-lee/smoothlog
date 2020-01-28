@@ -1,16 +1,16 @@
 .DarkMode {
   position: relative;
   float: right;
-  svg {
-    vertical-align: middle;
-    color: orange;
-    cursor: pointer;
-    font-size: 1.25rem;
+  .dark-mode-status {
+    display: inline-block;
+    svg {
+      vertical-align: middle;
+      color: orange;
+      cursor: pointer;
+      font-size: 1.25rem;
+    }
   }
-  .react-switch {
-    vertical-align: middle;
-    margin-left: 0.1rem;
-  }
+
   .dark-mode-tooltip {
     visibility: hidden;
     width: 120px;
@@ -53,8 +53,10 @@ body.dark-mode {
     color: #fff;
   }
   .DarkMode {
-    svg {
-      color: rgb(240, 240, 69);
+    .dark-mode-status {
+      svg {
+        color: rgb(240, 240, 69);
+      }
     }
     .dark-mode-tooltip {
       background-color: orangered;
@@ -70,9 +72,11 @@ body.light-mode {
 //모바일 환경이 아닌 디바이스에서만 Hover가 적용되도록 함
 @media only screen and (min-width: 768px) {
   .DarkMode {
-    svg {
-      &:hover {
-        color: orangered;
+    .dark-mode-status {
+      svg {
+        &:hover {
+          color: orangered;
+        }
       }
     }
 
