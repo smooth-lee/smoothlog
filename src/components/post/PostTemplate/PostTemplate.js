@@ -7,7 +7,7 @@ import { MarkdownRender } from '../../common/MarkdownRender'
 import { Comments } from '../../common/Comments/Comments'
 
 const PostTemplate = React.memo(props => {
-  const { title, date, html, id, readingTime } = props.pageContext
+  const { title, date, html, readingTime } = props.pageContext
   return (
     <Layout>
       <SEO title={title} />
@@ -17,7 +17,7 @@ const PostTemplate = React.memo(props => {
         <PostAuthor postDate={date} readingTime={readingTime} />
         <MarkdownRender html={html} />
         {process.env.NODE_ENV === 'production' && (
-          <Comments repo={'smoothlee7104/smoothlog-comments'} id={id} />
+          <Comments repo={'smoothlee7104/smoothlog-comments'} />
         )}
       </div>
     </Layout>

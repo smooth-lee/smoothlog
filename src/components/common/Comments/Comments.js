@@ -4,20 +4,17 @@ import React, { useEffect } from 'react'
 const src = 'https://utteranc.es/client.js'
 const branch = 'master'
 
-export const Comments = ({ repo, id }) => {
+export const Comments = ({ repo }) => {
   const rootElm = React.createRef()
-  // const darkMode = useDarkMode(false)
-  // let theme = darkMode.value ? 'photon-dark' : 'github-light'
   useEffect(() => {
     const utterances = document.createElement('script')
     const utterancesConfig = {
       src,
       repo,
       branch,
-      async: true,
-      'issue-term': id,
+      'issue-term': 'pathname',
       crossorigin: 'anonymous',
-      theme: 'github-light',
+      async: true,
     }
 
     Object.keys(utterancesConfig).forEach(configKey => {
