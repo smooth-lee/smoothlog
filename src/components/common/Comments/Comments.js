@@ -6,6 +6,8 @@ const branch = 'master'
 
 export const Comments = ({ repo }) => {
   const rootElm = React.createRef()
+  // const darkMode = useDarkMode(false)
+  // let theme = darkMode.value ? 'photon-dark' : 'github-light'
   useEffect(() => {
     const utterances = document.createElement('script')
     const utterancesConfig = {
