@@ -41,7 +41,9 @@ npm i react-hot-loader --save-dev
 
 ## hot 설정
 
----설정을 마쳤다면 프로젝트의 최상위 컴포넌트에서 hot을 불러온 뒤 `export default hot(module)(ComponentName)` 형식으로 작성해주기만하면 된다.
+---
+
+설정을 마쳤다면 프로젝트의 최상위 컴포넌트에서 hot을 불러온 뒤 `export default hot(module)(ComponentName)` 형식으로 작성해주기만하면 된다.
 
 ```js
 import React from 'react'
@@ -65,9 +67,5 @@ js 파일을 수정 후에 저장을 눌러보면 기존에 새로고침되던 �
 ## 마무리
 
 ---
-
-```bash
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-```
 
 나는 프로젝트 개발을 하면서 저장할 때마다 새로고침되는 문제가 매우 거슬렸는데 이 라이브러리를 사용하고 난 후에는 개발이 수월해졌다. 나와 같은 경험을 겪고있는 주변사람이 있다면 추천해보는 것을 권유한다.
