@@ -11,9 +11,13 @@
 
   .post-thumbnail {
     margin-bottom: 2rem;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(-50vw + 49.1%);
     height: 30rem;
+    background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
   }
 }

@@ -34,8 +34,10 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <DarkMode />
-        <main>{children}</main>
+        <main>
+          <DarkMode />
+          {children}
+        </main>
         <footer className="footer">
           ©<a href="https://github.com/smoothlee7104">smoothlog</a>, Built with
           {` `}
