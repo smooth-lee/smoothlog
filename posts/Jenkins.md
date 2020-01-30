@@ -30,36 +30,44 @@ Jenkins는 Github와 연동하여 push가 일어났을 때 특정 커맨드를 �
 
 Jenkins를 사용하려면 먼저 Java가 깔려있어야한다.
 
-    sudo apt-get update
-    sudo apt-get upgrade //분홍색 안내시 NO, 설정 변경시 n
-    sudo apt install default-jre //자바 설치
-    java -version //자바 버전 확인
+```bash
+sudo apt-get update
+sudo apt-get upgrade //분홍색 안내시 NO, 설정 변경시 n
+sudo apt install default-jre # 자바 설치
+java -version # 자바 버전 확인
 
-    openjdk version "11.0.5" 2019-10-15
-    OpenJDK Runtime Environment (build 11.0.5+10-post-Ubuntu-0ubuntu1.118.04)
-    OpenJDK 64-Bit Server VM (build 11.0.5+10-post-Ubuntu-0ubuntu1.118.04, mixed mode, sharing)
+openjdk version "11.0.5" 2019-10-15
+OpenJDK Runtime Environment (build 11.0.5+10-post-Ubuntu-0ubuntu1.118.04)
+OpenJDK 64-Bit Server VM (build 11.0.5+10-post-Ubuntu-0ubuntu1.118.04, mixed mode, sharing)
+```
 
 자바를 다 설치했다면 이제 Jenkins를 설치한다.
 
-    wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
-    sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
-    sudo apt-get update
-    sudo apt-get install jenkins
+```bash
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
 
-    sudo service jenkins restart
-    sudo systemctl status jenkins //젠킨스 서버 상태 확인
+sudo service jenkins restart
+sudo systemctl status jenkins # 젠킨스 서버 상태 확인
+```
 
 만약 jenkins 서버의 port를 변경하고 싶다면
 
-    sudo vi /etc/default/jenkins
+```bash
+sudo vi /etc/default/jenkins
 
-    HTTP_PORT=8080 부분을 원하는 포트로 변경 후 저장해주면 된다.
+# HTTP_PORT=8080 부분을 원하는 포트로 변경 후 저장해주면 된다.
+```
 
 그 다음 Jenkins 서버를 시작했다면 `http://{서버 IP 주소}:{jenkins 서버 Port}`를 입력하고 사이트에 들어간다. 처음 접속 시에는 admin password를 입력해야하기 때문에
 
 ![Jenkins/Untitled.png](Jenkins/Untitled.png)
 
-    sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
 
 후에 표시된 값을 복붙하여 로그인한다.
 
