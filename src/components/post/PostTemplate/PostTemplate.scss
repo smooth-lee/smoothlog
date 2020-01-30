@@ -8,4 +8,13 @@
     letter-spacing: -0.025rem;
     line-height: 40pt;
   }
+
+  .post-thumbnail {
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 30rem;
+    background-position: center;
+    // background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
