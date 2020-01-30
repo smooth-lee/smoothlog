@@ -12,12 +12,20 @@
   .post-thumbnail {
     margin-bottom: 2rem;
     width: 100vw;
-    margin-left: calc(-50vw + 49.1%);
+    margin-left: calc(-50vw + 50%);
     height: 30rem;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+  }
+
+  @media only screen and (max-device-width: 1366px) {
+    .PostTemplate {
+      .post-thumbnail {
+        background-attachment: scroll;
+      }
+    }
   }
 }

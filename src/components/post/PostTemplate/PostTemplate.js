@@ -18,7 +18,6 @@ const PostTemplate = React.memo(props => {
   return (
     <Layout>
       <SEO title={title} />
-
       <div className="PostTemplate">
         <h1 className="post-head-title">{title}</h1>
         <PostAuthor postDate={date} readingTime={readingTime} />
