@@ -11,6 +11,7 @@ exports.createPages = async ({ actions, graphql }) => {
               path
               title
               date(formatString: "MMM DD YYYY")
+              thumbnail
             }
             html
             id
@@ -38,6 +39,7 @@ exports.createPages = async ({ actions, graphql }) => {
         date: node.frontmatter.date,
         id: node.id,
         readingTime: node.fields.readingTime.text,
+        thumbnail: node.frontmatter.thumbnail,
       },
       component: path.resolve(
         __dirname,
