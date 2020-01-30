@@ -4,38 +4,31 @@ title: Jenkins 사용하기
 date: '2020-01-24'
 ---
 
-# Jenkins
+이번 포스트는 Jenkins를 이용해서 배포를 자동화하는 방법을 적어보려고 한다.
 
-이번 포스트는 무엇을 적을 것이냐면, Jenkins를 이용해서 배포를 자동화하는 방법을 공부하려고 한다. Jenkins는 Github와 연동하여 push가 일어났을 때 특정 커맨드를 서버에 실행시켜서 자동으로 변경된 부분을 받아오고 빌드시키고 배포하는 작업까지 도와준다.
+Jenkins는 Github와 연동하여 push가 일어났을 때 특정 커맨드를 서버에 실행시켜서 자동으로 변경된 부분을 받아오고 빌드시키고 배포하는 작업까지 도와준다.
 
-내가 사용하고 있는 서버는 nodejs 서버이고 package.json을 이용한 script로 빌드를하고 배포한다.
+내가 사용하고 있는 서버는 Node.js 서버이기 때문에 Node.js 서버 기준으로 작성되는 점 참고바란다.
 
-기존에 배포하는 방법으로는
+내가 Jenkins 사용 전 기존에 배포하는 방법은 다음과 같았다.
 
 1. 배포중이던 폴더 백업
 2. Win SCP를 이용한 프로젝트 파일 삭제 후 드래그인 드롭으로 파일 업데이트
 3. 명령어를 이용한 빌드 후 배포
 
-위 방식은 조금만 생각을 해보면 정말 정말 정말 스튜핏한 방법이다. (정xx씨 정말..)
+위 방식은 매우 수동적인 배포 방법이다.
 
-이 회사에서 내가 혼자서 일하기 전에 같이 일한 사람이 있는데, 그 분께서는 위 방식대로 배포를 진행하셨다. 아는게 없었을 당시의 나라서 나는 이 방식이 최선인 줄만 알고 지금까지 계속 사용해왔는데 이 방식이 문제가 없다고 느낀 나도 어느정도 문제가 있다고 본다.
+서버 배포에 대한 지식이 얕았던 나는 이 방식이 최선인 줄만 알고 지금까지 계속 사용해왔는데 이 배포 방식에 문제가 없다고 느낀 나 스스로가 반성 중이다.
 
-그래서, 나는 다음과 같은 방식으로 배포를 자동화하려 한다.
+그래서 나는 Jenkins를 이용하여 다음과 같은 방식으로 배포를 자동화하기로 하였다.
 
 1. develop 브랜치 혹은 브랜치 전략에 맞게 개발 후 master 브랜치로 merge
 2. master 브랜치에서 코드 충돌 여부 확인 후 git push
-3. git push가 일어나면 jenkins 서버에서 설정해놓은 커맨드를 실행하여 빌드.
-4. 빌드가 되었으면 배포.
-
-사실 3번 이전에 중요한 부분이 빠졌는데, 바로 테스트 코드를 작성하고 테스트 코드를 패스했을 때 빌드하도록 만드는 것이다. 그러나 지금 상황에서 나는 Jest를 사용해보지 않았고, 공부하기 이전이라 그 부분은 우선 생략하도록 하겠다.
-
-서론이 길었는데 그럼 Jenkins를 시작해보자.
+3. git push 발생 시 jenkins 서버에서 작성해놓은 스크립트를 통해 빌드 및 배포
 
 ## Jenkins 설치
 
-Jenkins를 사용하려면 Java가 깔려있어야한다.
-
-그러기 위해 자바를 먼저 설치한다.
+Jenkins를 사용하려면 먼저 Java가 깔려있어야한다.
 
     sudo apt-get update
     sudo apt-get upgrade //분홍색 안내시 NO, 설정 변경시 n
@@ -53,12 +46,10 @@ Jenkins를 사용하려면 Java가 깔려있어야한다.
     sudo apt-get update
     sudo apt-get install jenkins
 
-이제 설치는 끝났다. service 명령어를 이용해 jenkins를 시작한다.
-
     sudo service jenkins restart
-    sudo systemctl status jenkins
+    sudo systemctl status jenkins //젠킨스 서버 상태 확인
 
-참고로 jenkins 서버의 port를 변경하고 싶다면
+만약 jenkins 서버의 port를 변경하고 싶다면
 
     sudo vi /etc/default/jenkins
 
@@ -84,7 +75,7 @@ Jenkins를 사용하려면 Java가 깔려있어야한다.
 
 ![Jenkins/Untitled%204.png](Jenkins/Untitled-4.png)
 
-jenkins URL을 입력한 후 Save and Finish를 누른다. 여기는 나중에 정할 수도 있으므로 Not now를 눌러 건너뛸 수도 있다. 나는 DNS를 사용할 수도 있기에 우선 건너뛰었다.
+jenkins URL을 입력한 후 Save and Finish를 누른다. 여기는 나중에 설정에서 수정할 수 있으므로 Not now를 눌러 건너뛸 수도 있다.
 
 여기까지 Jenkins 설치는 끝났다. 이제 Github와 연동하여 프로젝트를 생성해보자.
 
@@ -98,7 +89,7 @@ jenkins URL을 입력한 후 Save and Finish를 누른다. 여기는 나중에 �
 
 그 다음 Github project를 체크하고 프로젝트 URL을 넣는다.
 
-`[https://github.com/유저네임/프로젝트명](https://github.com/유저네임/프로젝트명)` 이다.
+`(https://github.com/유저네임/프로젝트명)` 이다.
 
 ![Jenkins/Untitled%206.png](Jenkins/Untitled-6.png)
 

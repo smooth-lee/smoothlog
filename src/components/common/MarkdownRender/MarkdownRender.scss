@@ -1,12 +1,34 @@
 .MarkdownRender {
-  ol,
-  ul {
-    font-weight: 600;
+  p,
+  li {
+    code {
+      padding: 3px 5px;
+      margin: 0 2px;
+      white-space: nowrap;
+    }
   }
   li {
-    margin-left: 2rem;
+    margin-left: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
   }
   hr {
     margin-top: -0.5rem;
+  }
+  a {
+    color: #ff5252;
+    text-decoration: none;
+    &:hover {
+      border-bottom: 1px solid #ff5252;
+    }
   }
 }
