@@ -98,7 +98,7 @@ jenkins URL을 입력한 후 Save and Finish를 누른다. 여기는 나중에 �
 
 그 다음 Github project를 체크하고 프로젝트 URL을 넣는다.
 
-`(https://github.com/유저네임/프로젝트명)` 이다.
+`https://github.com/유저네임/프로젝트명` 이다.
 
 ![Jenkins/Untitled%206.png](Jenkins/Untitled-6.png)
 
