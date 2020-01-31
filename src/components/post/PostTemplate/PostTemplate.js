@@ -9,6 +9,7 @@ import { Comments } from '../../common/Comments/Comments'
 const PostTemplate = React.memo(props => {
   const {
     title,
+    description,
     date,
     html,
     readingTime,
@@ -17,7 +18,7 @@ const PostTemplate = React.memo(props => {
   } = props.pageContext
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} description={description || null} />
       <div className="PostTemplate">
         <h1 className="post-head-title">{title}</h1>
         <PostAuthor postDate={date} readingTime={readingTime} />
