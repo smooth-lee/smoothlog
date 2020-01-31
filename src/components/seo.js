@@ -36,6 +36,10 @@ function SEO({ description, lang, meta, title, keywords, url, thumbnail }) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
+          property: 'og:site_name',
+          content: 'smoothlog',
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
