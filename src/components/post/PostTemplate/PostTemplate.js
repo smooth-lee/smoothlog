@@ -26,7 +26,7 @@ const PostTemplate = React.memo(props => {
         description={description || null}
         keywords={tags.toString() || null}
         url={url}
-        thumbnail={thumbnail || thumbnailImg}
+        thumbnail={(thumbnail ? thumbnail : thumbnailImg) || null}
       />
       <div className="PostTemplate">
         <h1 className="post-head-title">{title}</h1>
