@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-// import useDarkMode from 'use-dark-mode'
+import './Comments.scss'
 
 const src = 'https://utteranc.es/client.js'
 const branch = 'master'

@@ -5,6 +5,7 @@ import './PostTemplate.scss'
 import { PostAuthor } from '../PostAuthor'
 import { MarkdownRender } from '../../common/MarkdownRender'
 import { Comments } from '../../common/Comments/Comments'
+import { TagList } from '../TagList'
 
 const PostTemplate = React.memo(props => {
   const {
@@ -15,6 +16,7 @@ const PostTemplate = React.memo(props => {
     readingTime,
     thumbnail,
     thumbnailImg,
+    tags,
   } = props.pageContext
   return (
     <Layout>
@@ -37,6 +39,7 @@ const PostTemplate = React.memo(props => {
           />
         )}
         <MarkdownRender html={html} />
+        {tags && <TagList tags={tags} />}
         {process.env.NODE_ENV === 'production' && (
           <Comments repo={'smoothlee7104/smoothlog-comments'} />
         )}
