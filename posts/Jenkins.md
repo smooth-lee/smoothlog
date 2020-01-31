@@ -4,6 +4,7 @@ title: Jenkins 사용하기
 description: ''
 date: '2020-01-24'
 thumbnailImg: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Jenkins_logo_with_title.svg'
+tags: ['jenkins', 'nodejs', '자동화', '배포', '빌드']
 ---
 
 이번 포스트는 Jenkins를 이용해서 배포를 자동화하는 방법을 적어보려고 한다.

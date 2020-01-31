@@ -65,6 +65,14 @@ body.dark-mode {
   .PostItem {
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
+  .TagItem {
+    background: #ff5252;
+    border: 1px solid #843838;
+
+    &:hover {
+      background: #bf3f3f;
+    }
+  }
 }
 body.light-mode {
   background-color: #fff;
