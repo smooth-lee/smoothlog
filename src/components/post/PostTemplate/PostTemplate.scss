@@ -20,12 +20,12 @@
     background-size: cover;
     overflow: hidden;
   }
+}
 
-  @media only screen and (max-device-width: 1366px) {
-    .PostTemplate {
-      .post-thumbnail {
-        background-attachment: scroll;
-      }
+@media all and (max-width: 1366px) {
+  .PostTemplate {
+    .post-thumbnail {
+      background-attachment: scroll;
     }
   }
 }
