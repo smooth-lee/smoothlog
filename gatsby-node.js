@@ -18,6 +18,7 @@ exports.createPages = async ({ actions, graphql }) => {
             }
             html
             id
+            excerpt(pruneLength: 200, truncate: true)
             fields {
               readingTime {
                 text
@@ -39,7 +40,9 @@ exports.createPages = async ({ actions, graphql }) => {
       context: {
         html: node.html,
         title: String(node.frontmatter.title),
-        description: String(node.frontmatter.description),
+        description: node.frontmatter.description
+          ? String(node.frontmatter.description)
+          : node.excerpt,
         date: node.frontmatter.date,
         id: node.id,
         readingTime: node.fields.readingTime.text,

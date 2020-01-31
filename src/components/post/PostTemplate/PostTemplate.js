@@ -8,6 +8,7 @@ import { Comments } from '../../common/Comments/Comments'
 import { TagList } from '../TagList'
 
 const PostTemplate = React.memo(props => {
+  const url = window.location.href
   const {
     title,
     description,
@@ -20,7 +21,13 @@ const PostTemplate = React.memo(props => {
   } = props.pageContext
   return (
     <Layout>
-      <SEO title={title} description={description || null} />
+      <SEO
+        title={title}
+        description={description || null}
+        keywords={tags.toString() || null}
+        url={url}
+        thumbnail={thumbnail || thumbnailImg}
+      />
       <div className="PostTemplate">
         <h1 className="post-head-title">{title}</h1>
         <PostAuthor postDate={date} readingTime={readingTime} />
