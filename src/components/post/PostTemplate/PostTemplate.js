@@ -8,7 +8,10 @@ import { Comments } from '../../common/Comments/Comments'
 import { TagList } from '../TagList'
 
 const PostTemplate = React.memo(props => {
-  const url = window.location.href
+  let url
+  if (typeof window !== 'undefined') {
+    url = window.location.href
+  }
   const {
     title,
     description,
