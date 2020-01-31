@@ -51,7 +51,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Nanum Myeongjo', 'Noto Sans KR', 'Noto Serif KR'],
+          families: ['Noto Sans KR', 'Noto Serif KR'],
         },
       },
     },
