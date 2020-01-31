@@ -2,7 +2,7 @@
 path: /jenkins-사용하기
 title: Jenkins 사용하기
 date: '2020-01-24'
-thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Jenkins_logo_with_title.svg'
+thumbnailImg: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Jenkins_logo_with_title.svg'
 ---
 
 이번 포스트는 Jenkins를 이용해서 배포를 자동화하는 방법을 적어보려고 한다.

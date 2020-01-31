@@ -19,6 +19,14 @@ class DarkMode extends Component {
     this.setState({ isDarkMode: false })
   }
 
+  componentDidMount() {
+    if (document.body.classList.value === 'dark-mode') {
+      this.setState({ isDarkMode: true })
+    } else {
+      this.setState({ isDarkMode: false })
+    }
+  }
+
   render() {
     const { isDarkMode } = this.state
     return (

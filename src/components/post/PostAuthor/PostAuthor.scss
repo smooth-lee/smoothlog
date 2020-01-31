@@ -17,6 +17,10 @@
     margin-left: 0.6rem;
     .author-name {
       font-size: 0.9rem;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
     }
 
     .author-post-date-info {

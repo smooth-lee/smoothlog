@@ -11,10 +11,21 @@
 
   .post-thumbnail {
     margin-bottom: 2rem;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     height: 30rem;
+    background-attachment: fixed;
     background-position: center;
-    // background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+}
+
+@media all and (max-width: 1366px) {
+  .PostTemplate {
+    .post-thumbnail {
+      background-attachment: scroll;
+    }
   }
 }

@@ -43,7 +43,9 @@ npm i react-hot-loader --save-dev
 
 ## hot 설정
 
----설정을 마쳤다면 프로젝트의 최상위 컴포넌트에서 hot을 불러온 뒤 `export default hot(module)(ComponentName)` 형식으로 작성해주기만하면 된다.
+---
+
+설정을 마쳤다면 프로젝트의 최상위 컴포넌트에서 hot을 불러온 뒤 `export default hot(module)(ComponentName)` 형식으로 작성해주기만하면 된다.
 
 ```js
 import React from 'react'
