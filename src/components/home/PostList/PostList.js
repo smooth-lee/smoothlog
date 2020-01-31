@@ -22,11 +22,14 @@ const PostListQuery = graphql`
           frontmatter {
             path
             title
+            description
             date(formatString: "MMM DD YYYY")
+            thumbnail
+            thumbnailImg
           }
           html
           id
-          excerpt(pruneLength: 200, truncate: true)
+          excerpt(pruneLength: 100, truncate: true, format: HTML)
           fields {
             readingTime {
               text

@@ -1,21 +1,46 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import './PostItem.scss'
+import { MarkdownRender } from '../../common/MarkdownRender'
 
 const PostItem = ({ node }) => {
+  const {
+    path,
+    title,
+    thumbnail,
+    thumbnailImg,
+    date,
+    description,
+  } = node.frontmatter
   return (
     <li className="PostItem">
-      <h2 className="post-title">
-        <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
-      </h2>
-      <div className="post-time-info">
-        <span className="post-create-date">{node.frontmatter.date}</span>
-        {'·'}
-        <span className="post-reading-time">
-          {node.fields.readingTime.text}
-        </span>
-      </div>
-      <p className="post-desc">{node.excerpt}</p>
+      <Link to={path}>
+        {thumbnail && (
+          <div
+            className="post-thumbnail"
+            style={{ backgroundImage: `url(${thumbnail})` }}
+            alt="thumbnail"
+          />
+        )}
+        {thumbnailImg && (
+          <img
+            className="post-thumbnail-img"
+            src={thumbnailImg}
+            alt="thumbnail"
+          />
+        )}
+        <h2 className="post-title">{title}</h2>
+        <div className="post-time-info">
+          <span className="post-create-date">{date}</span>
+          {'·'}
+          <span className="post-reading-time">
+            {node.fields.readingTime.text}
+          </span>
+        </div>
+        <p className="post-desc">
+          {description ? description : <MarkdownRender html={node.excerpt} />}
+        </p>
+      </Link>
     </li>
   )
 }

@@ -1,6 +1,7 @@
 ---
 path: /jenkins-사용하기
 title: Jenkins 사용하기
+description: ''
 date: '2020-01-24'
 thumbnailImg: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Jenkins_logo_with_title.svg'
 ---
