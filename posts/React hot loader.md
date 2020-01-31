@@ -2,7 +2,7 @@
 path: /react-hot-loader-사용하기
 title: React-hot-loader 사용하기
 date: '2020-01-21'
-thumbnail: 'https://images.unsplash.com/photo-1497906539264-eb74442e37a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
+thumbnail: 'https://images.unsplash.com/photo-1566837945700-30057527ade0?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=3600'
 
 ---react-hot-loader는 코드가 변경되었을때 페이지를 새로고침하지 않고 바뀐 부분만 빠르게 교체해주는 라이브러리다. 리액트 앱 개발을 할때 필수적인 라이브러리는 아니지만, 규모가 커지면 개발 중 수정사항이 생길때마다 새로고침이 되어버리면 입력한 내용이 전부 사라져 다시 입력해야하는 번거로움 같이 개발에 딜레이가 발생되어 흐름이 끊긴다.
 
