@@ -1,14 +1,17 @@
-import React from "react"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from 'react'
+import { Link } from 'gatsby'
+import SEO from '../components/seo'
+import './404.scss'
 
 const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+  <div className="NotFound">
+    <SEO title="찾을 수 없는 페이지" />
+    <h1>404 NOT FOUND</h1>
+    <p>찾을 수 없는 페이지입니다.</p>
+    <Link to="/">
+      <button>홈으로</button>
+    </Link>
+  </div>
 )
 
 export default NotFoundPage

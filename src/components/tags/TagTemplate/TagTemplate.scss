@@ -1,0 +1,55 @@
+.tag-post-count {
+  margin-top: -0.5rem;
+  font-size: 0.9rem;
+  color: rgb(136, 136, 136);
+}
+
+.TagTemplate {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+
+  .tag-post-item {
+    width: calc(100% - 1.75rem);
+    margin: 1.5rem 0.875rem;
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    a {
+      text-decoration: none;
+      color: inherit;
+      .post-title {
+        margin: 0.8rem 0;
+      }
+
+      .post-thumbnail {
+        width: 100%;
+        padding-top: 40%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .post-time-info {
+        display: flex;
+        margin: 0.5rem 0;
+
+        .post-create-date {
+          margin-right: 0.2rem;
+          font-size: 0.9rem;
+        }
+        .post-reading-time {
+          font-size: 0.8rem;
+          color: #aaa;
+          margin-left: 0.2rem;
+        }
+      }
+
+      .post-desc {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

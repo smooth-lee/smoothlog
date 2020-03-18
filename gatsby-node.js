@@ -1,15 +1,20 @@
 const path = require('path')
+const _ = require('lodash')
 
-exports.createPages = async ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const postTemplate = path.resolve(
     __dirname,
     './src/components/post/PostTemplate/PostTemplate.js'
   )
+  const tagTemplate = path.resolve(
+    __dirname,
+    './src/components/tags/TagTemplate/TagTemplate.js'
+  )
 
-  const posts = graphql(`
+  const result = await graphql(`
     {
-      allMarkdownRemark {
+      postsRemark: allMarkdownRemark {
         edges {
           node {
             frontmatter {
@@ -32,31 +37,50 @@ exports.createPages = async ({ actions, graphql }) => {
           }
         }
       }
+      tagsGroup: allMarkdownRemark {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
     }
-  `).then(result => {
-    if (result.errors) {
-      Promise.reject(errors)
-    }
+  `)
+  // handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        context: {
-          html: node.html,
-          title: String(node.frontmatter.title),
-          description: node.frontmatter.description
-            ? String(node.frontmatter.description)
-            : node.excerpt,
-          date: node.frontmatter.date,
-          id: node.id,
-          readingTime: node.fields.readingTime.text,
-          thumbnail: node.frontmatter.thumbnail,
-          thumbnailImg: node.frontmatter.thumbnailImg,
-          tags: node.frontmatter.tags,
-        },
-        component: postTemplate,
-      })
+  const posts = result.data.postsRemark.edges
+
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      context: {
+        html: node.html,
+        title: String(node.frontmatter.title),
+        description: node.frontmatter.description
+          ? String(node.frontmatter.description)
+          : node.excerpt,
+        date: node.frontmatter.date,
+        id: node.id,
+        readingTime: node.fields.readingTime.text,
+        thumbnail: node.frontmatter.thumbnail,
+        thumbnailImg: node.frontmatter.thumbnailImg,
+        tags: node.frontmatter.tags,
+      },
+      component: postTemplate,
     })
   })
-  return Promise.all([posts])
+
+  const tags = result.data.tagsGroup.group
+
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      context: {
+        tag: tag.fieldValue,
+      },
+      component: tagTemplate,
+    })
+  })
 }

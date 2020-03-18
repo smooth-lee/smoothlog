@@ -1,13 +1,22 @@
 html {
+  height: 100%;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
+  height: 100%;
   overflow-x: hidden;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  #___gatsby {
+    height: 100%;
+    #gatsby-focus-wrapper {
+      height: 100%;
+    }
+  }
 }
 article,
 aside,
@@ -617,6 +626,7 @@ pre tt:after {
     text-decoration: none !important;
   }
 }
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
