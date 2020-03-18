@@ -64,7 +64,7 @@ body.dark-mode {
   }
   .PostTagItem {
     background: #212121;
-    border: 1px solid #aaa;
+    border: 1px solid rgba($color: #888, $alpha: 0.2);
 
     &:hover {
       background: #2f2f2f;
@@ -72,8 +72,10 @@ body.dark-mode {
   }
 
   .TagItem {
+    background: #212121;
+    border: 1px solid rgba($color: #888, $alpha: 0.2);
     &:hover {
-      background: #212121;
+      background: #2f2f2f;
     }
   }
 }

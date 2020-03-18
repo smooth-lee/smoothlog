@@ -12,6 +12,7 @@ const TagItem = ({ tagInfo, tagPercentage }) => {
     >
       <Link className="tag-box" to={`/tags/${tagInfo.fieldValue}`}>
         {tagInfo.fieldValue}
+        <span>{tagInfo.totalCount}</span>
       </Link>
     </li>
   )
