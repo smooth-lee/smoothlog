@@ -7,7 +7,7 @@ const TagItem = ({ tagInfo, tagPercentage }) => {
     <li
       className={`TagItem ${(tagPercentage > 20 && 'small-tag') ||
         (tagPercentage > 40 && 'medium-tag') ||
-        (tagPercentage > 70 && 'big-tag') ||
+        (tagPercentage > 60 && 'big-tag') ||
         'tiny-tag'}`}
     >
       <Link className="tag-box" to={`/tags/${tagInfo.fieldValue}`}>
