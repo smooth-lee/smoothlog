@@ -70,6 +70,15 @@ body.dark-mode {
       background: #2f2f2f;
     }
   }
+
+  .TagItem {
+    background: #212121;
+    border: 1px solid #aaa;
+
+    &:hover {
+      background: #2f2f2f;
+    }
+  }
 }
 body.light-mode {
   background-color: #fff;
