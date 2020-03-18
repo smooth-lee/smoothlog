@@ -7,7 +7,7 @@ const TagsPage = () => {
   return (
     <Layout>
       <SEO title="Tags" />
-      <h1>태그</h1>
+      <h1>🏷️ 태그</h1>
       <TagList />
     </Layout>
   )

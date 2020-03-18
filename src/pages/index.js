@@ -8,7 +8,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>최근 작성한 게시글 목록</h1>
+      <h1>📖 게시글 목록</h1>
       <PostList />
     </Layout>
   )
