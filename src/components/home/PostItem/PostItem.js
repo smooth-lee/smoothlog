@@ -15,31 +15,37 @@ const PostItem = ({ node }) => {
   return (
     <li className="PostItem">
       <Link to={path}>
-        {thumbnail && (
-          <div
-            className="post-thumbnail"
-            style={{ backgroundImage: `url(${thumbnail})` }}
-            alt="thumbnail"
-          />
-        )}
-        {thumbnailImg && (
-          <img
-            className="post-thumbnail-img"
-            src={thumbnailImg}
-            alt="thumbnail"
-          />
-        )}
-        <h2 className="post-title">{title}</h2>
-        <div className="post-time-info">
-          <span className="post-create-date">{date}</span>
-          {'·'}
-          <span className="post-reading-time">
-            {node.fields.readingTime.text}
-          </span>
+        <div className="post-thumbnail-wrap">
+          {thumbnail && (
+            <div
+              className="post-thumbnail"
+              style={{ backgroundImage: `url(${thumbnail})` }}
+              alt="thumbnail"
+            />
+          )}
+          {thumbnailImg && (
+            <div className="post-thumbnail-img-box">
+              <img
+                className="post-thumbnail-img"
+                src={thumbnailImg}
+                alt="thumbnail"
+              />
+            </div>
+          )}
         </div>
-        <p className="post-desc">
-          {description ? description : <MarkdownRender html={node.excerpt} />}
-        </p>
+        <div className="post-detail">
+          <h2 className="post-title">{title}</h2>
+          <div className="post-time-info">
+            <span className="post-create-date">{date}</span>
+            {'·'}
+            <span className="post-reading-time">
+              {node.fields.readingTime.text}
+            </span>
+          </div>
+          <p className="post-desc">
+            {description ? description : <MarkdownRender html={node.excerpt} />}
+          </p>
+        </div>
       </Link>
     </li>
   )

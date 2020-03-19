@@ -27,35 +27,41 @@ const TagTemplate = ({ pageContext, data }) => {
           return (
             <li key={id} className="tag-post-item">
               <Link to={path}>
-                {thumbnail && (
-                  <div
-                    className="post-thumbnail"
-                    style={{ backgroundImage: `url(${thumbnail})` }}
-                    alt="thumbnail"
-                  />
-                )}
-                {thumbnailImg && (
-                  <img
-                    className="post-thumbnail-img"
-                    src={thumbnailImg}
-                    alt="thumbnail"
-                  />
-                )}
-                <h2 className="post-title">{title}</h2>
-                <div className="post-time-info">
-                  <span className="post-create-date">{date}</span>
-                  {'·'}
-                  <span className="post-reading-time">
-                    {node.fields.readingTime.text}
-                  </span>
-                </div>
-                <p className="post-desc">
-                  {description ? (
-                    description
-                  ) : (
-                    <MarkdownRender html={node.excerpt} />
+                <div>
+                  {thumbnail && (
+                    <div
+                      className="post-thumbnail"
+                      style={{ backgroundImage: `url(${thumbnail})` }}
+                      alt="thumbnail"
+                    />
                   )}
-                </p>
+                  {thumbnailImg && (
+                    <div className="tag-post-thumbnail-img-box">
+                      <img
+                        className="post-thumbnail-img"
+                        src={thumbnailImg}
+                        alt="thumbnail"
+                      />
+                    </div>
+                  )}
+                </div>
+                <div className="tag-post-detail">
+                  <h2 className="post-title">{title}</h2>
+                  <div className="post-time-info">
+                    <span className="post-create-date">{date}</span>
+                    {'·'}
+                    <span className="post-reading-time">
+                      {node.fields.readingTime.text}
+                    </span>
+                  </div>
+                  <p className="post-desc">
+                    {description ? (
+                      description
+                    ) : (
+                      <MarkdownRender html={node.excerpt} />
+                    )}
+                  </p>
+                </div>
               </Link>
             </li>
           )
