@@ -12,6 +12,7 @@ const TagList = () => {
     <ul className="TagList">
       {data.allMarkdownRemark.group.map(tagInfo => (
         <TagItem
+          key={tagInfo.fieldValue}
           tagInfo={tagInfo}
           tagPercentage={tagPercentage(tagInfo.totalCount, tagList.totalCount)}
         />

@@ -1,19 +1,19 @@
 import React from 'react'
 import './HeaderSideMenu.scss'
 import { MdClose } from 'react-icons/md'
-import { TagList } from '../../tags/TagList'
 import { Link } from 'gatsby'
 import { DarkMode } from '../DarkMode'
+import { HeaderSideTags } from '../HeaderSideTags'
 
 const HeaderSideMenu = ({ onToggle, isOpened }) => {
   return (
     <div className={`HeaderSideMenu ${isOpened ? 'is-side-menu-opened' : ''}`}>
-      <div class="side-menu-overlay" onClick={onToggle}></div>
-      <div class="side-menu-slide">
-        <div class="side-menu-content">
-          <section class="side-menu-tags">
+      <div className="side-menu-overlay" onClick={onToggle}></div>
+      <div className="side-menu-slide">
+        <div className="side-menu-content">
+          <section className="side-menu-tags">
             <h3>태그</h3>
-            <TagList />
+            <HeaderSideTags />
             <div className="side-menu-tags-link">
               <Link to="/tags">더보기</Link>
             </div>
@@ -23,7 +23,7 @@ const HeaderSideMenu = ({ onToggle, isOpened }) => {
             <DarkMode />
           </section>
         </div>
-        <div class="side-menu-close">
+        <div className="side-menu-close">
           <MdClose onClick={onToggle} />
         </div>
       </div>

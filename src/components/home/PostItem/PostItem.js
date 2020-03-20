@@ -42,9 +42,9 @@ const PostItem = ({ node }) => {
               {node.fields.readingTime.text}
             </span>
           </div>
-          <p className="post-desc">
+          <div className="post-desc">
             {description ? description : <MarkdownRender html={node.excerpt} />}
-          </p>
+          </div>
         </div>
       </Link>
     </li>
