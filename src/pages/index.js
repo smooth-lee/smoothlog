@@ -9,9 +9,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>
-        <Emoji symbol="📖" label="book" /> 게시글 목록
-      </h1>
       <PostList />
     </Layout>
   )

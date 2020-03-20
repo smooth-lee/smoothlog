@@ -8,9 +8,6 @@ const TagsPage = () => {
   return (
     <Layout>
       <SEO title="Tags" />
-      <h1>
-        <Emoji symbol="🏷️" label="tag"></Emoji> 태그
-      </h1>
       <TagList />
     </Layout>
   )
