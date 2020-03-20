@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { TagList } from '../components/tags/TagList'
-import { Emoji } from '../components/common/Emoji'
 
 const TagsPage = () => {
   return (
