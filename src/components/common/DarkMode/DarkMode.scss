@@ -1,6 +1,6 @@
 .DarkMode {
   position: relative;
-  float: right;
+
   .dark-mode-status {
     display: inline-block;
     svg {
@@ -23,7 +23,7 @@
     box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.65);
     /* Position the tooltip */
     position: absolute;
-    right: 28px;
+    left: 30px;
     z-index: 1;
   }
 }
@@ -46,8 +46,16 @@ body.dark-mode {
   .medium-zoom-overlay {
     background-color: #282c35 !important;
   }
-  .header a {
-    color: #fff !important;
+  .Header {
+    background-color: #282c35;
+    a {
+      color: #fff !important;
+    }
+  }
+  .HeaderSideMenu {
+    .side-menu-slide {
+      background-color: #282c35;
+    }
   }
   .footer a {
     color: #fff;

@@ -1,15 +1,9 @@
 .Header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 60px;
-  background-color: #fff;
   margin-bottom: 1.45rem;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
-  transition: top 0.2s ease-in-out;
-  transition: background-color 0.3s ease;
-  z-index: 100;
+
+  transition: background-color 0.3s ease, margin-top 0.3s ease;
+  background-color: #fff;
 
   .header-wrap {
     display: flex;
@@ -40,6 +34,8 @@
   }
 }
 
-.header-scroll-up {
-  top: -60px;
+.headroom--pinned {
+  .Header {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  }
 }

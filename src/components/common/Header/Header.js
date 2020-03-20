@@ -4,22 +4,25 @@ import React from 'react'
 import { MdMenu } from 'react-icons/md'
 import './Header.scss'
 import { HeaderSideMenu } from '../HeaderSideMenu'
+import Headroom from 'react-headroom'
 
 const Header = ({ onToggle, isOpened }) => (
   <>
     <HeaderSideMenu onToggle={onToggle} isOpened={isOpened} />
-    <header className="Header">
-      <div className="header-wrap">
-        <div className="header-logo">
-          <h1>
-            <Link to="/">smoothlog</Link>
-          </h1>
+    <Headroom>
+      <header className={`Header`}>
+        <div className="header-wrap">
+          <div className="header-logo">
+            <h1>
+              <Link to="/">smoothlog</Link>
+            </h1>
+          </div>
+          <div className="header-menu">
+            <MdMenu onClick={onToggle} />
+          </div>
         </div>
-        <div className="header-menu">
-          <MdMenu onClick={onToggle} />
-        </div>
-      </div>
-    </header>
+      </header>
+    </Headroom>
   </>
 )
 
