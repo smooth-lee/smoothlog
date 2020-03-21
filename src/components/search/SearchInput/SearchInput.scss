@@ -1,0 +1,18 @@
+.SearchInput {
+  display: flex;
+  border: 1px solid #eee;
+  padding: 0.5rem 0.6rem;
+
+  svg {
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: inherit;
+    padding-left: 0.5rem;
+  }
+}

@@ -1,3 +1,7 @@
+const queries = require('./src/utils/algolia')
+
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://smoothlog.com`,
@@ -6,6 +10,16 @@ module.exports = {
     author: `@smoothlee7104`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
+        queries,
+        chunkSize: 10000, // default: 1000
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -90,6 +104,15 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-reading-time`,
+          {
+            resolve: `gatsby-plugin-algolia`,
+            options: {
+              appId: process.env.GATSBY_ALGOLIA_APP_ID,
+              apiKey: process.env.ALGOLIA_ADMIN_KEY,
+              queries,
+              chunkSize: 10000, // default: 1000
+            },
+          },
           {
             resolve: `@raae/gatsby-remark-oembed`,
             options: {

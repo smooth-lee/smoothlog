@@ -24,6 +24,18 @@
       }
     }
 
+    .header-search {
+      margin-right: 0.3rem;
+      a {
+        color: inherit;
+        text-decoration: none;
+        svg {
+          font-size: 1.8rem;
+          vertical-align: middle;
+          cursor: pointer;
+        }
+      }
+    }
     .header-menu {
       svg {
         font-size: 1.8rem;
