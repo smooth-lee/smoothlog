@@ -1,0 +1,21 @@
+.NextPost {
+  flex: 1 1;
+  padding-left: 1.5rem;
+  direction: rtl;
+
+  div {
+    font-size: 0.7rem;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .NextPost {
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+}

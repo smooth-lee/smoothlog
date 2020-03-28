@@ -35,6 +35,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               }
             }
           }
+          previous {
+            frontmatter {
+              path
+              title
+            }
+          }
+          next {
+            frontmatter {
+              path
+              title
+            }
+          }
         }
       }
       tagsGroup: allMarkdownRemark {
@@ -52,7 +64,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const posts = result.data.postsRemark.edges
 
-  posts.forEach(({ node }) => {
+  posts.forEach(({ node, previous, next }) => {
     createPage({
       path: node.frontmatter.path,
       context: {
@@ -67,6 +79,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         thumbnail: node.frontmatter.thumbnail,
         thumbnailImg: node.frontmatter.thumbnailImg,
         tags: node.frontmatter.tags,
+        prevPost: previous,
+        nextPost: next,
       },
       component: postTemplate,
     })

@@ -6,6 +6,9 @@ import { PostAuthor } from '../PostAuthor'
 import { MarkdownRender } from '../../common/MarkdownRender'
 import { Comments } from '../../common/Comments/Comments'
 import { PostTagList } from '../PostTagList'
+import { AnotherPostWrap } from '../AnotherPostWrap'
+import { PrevPost } from '../PrevPost'
+import { NextPost } from '../NextPost'
 
 const PostTemplate = React.memo(props => {
   let url
@@ -21,7 +24,10 @@ const PostTemplate = React.memo(props => {
     thumbnail,
     thumbnailImg,
     tags,
+    prevPost,
+    nextPost,
   } = props.pageContext
+
   return (
     <Layout>
       <SEO
@@ -50,6 +56,10 @@ const PostTemplate = React.memo(props => {
         )}
         <MarkdownRender html={html} />
         {tags && <PostTagList tags={tags} />}
+        <AnotherPostWrap>
+          <PrevPost prevPost={prevPost} />
+          <NextPost nextPost={nextPost} />
+        </AnotherPostWrap>
         {process.env.NODE_ENV === 'production' && (
           <Comments repo={'smoothlee7104/smoothlog-comments'} />
         )}
