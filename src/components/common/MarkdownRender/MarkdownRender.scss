@@ -4,7 +4,8 @@
   p,
   li {
     code {
-      padding: 3px 5px;
+      font-size: 0.875rem;
+      padding: 6px;
       margin: 0 2px;
       white-space: nowrap;
     }
@@ -22,15 +23,17 @@
     font-weight: 700;
     margin-top: 1.5em;
     margin-bottom: 1em;
+    line-height: 1.5;
   }
   hr {
     margin-top: -0.5rem;
   }
   a {
-    color: #ff5252;
+    color: #696969;
+    font-style: italic;
     text-decoration: none;
     &:hover {
-      border-bottom: 1px solid #ff5252;
+      border-bottom: 1px solid #696969;
     }
   }
 }

@@ -29,3 +29,11 @@
     }
   }
 }
+
+@media all and (max-width: 1024px) {
+  .PostTemplate {
+    .post-head-title {
+      font-size: 2.2rem;
+    }
+  }
+}
