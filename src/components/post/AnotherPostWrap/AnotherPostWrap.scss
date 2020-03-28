@@ -6,6 +6,15 @@
     display: inline-block;
     text-decoration: none;
     color: inherit;
+    width: 100%;
+    padding: 0.875rem;
+    border-radius: 4px;
+    box-shadow: 3px 2px 10px 2px #eee;
+    transition: transform 0.2s ease-out;
+
+    &:hover {
+      transform: translate(0, -5px);
+    }
   }
 }
 
