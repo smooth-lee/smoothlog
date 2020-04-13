@@ -22,9 +22,11 @@ if (typeof sessionStorage !== 'undefined') {
     const font2 = new FontFaceObserver('Noto Serif KR')
 
     Promise.all([font.load(null, 3000), font2.load(null, 3000)]).then(
-      function() {
-        document.documentElement.classList.add('fonts-loaded')
-        sessionStorage.fontsLoaded = true
+      ([font, font2]) => {
+        if (font.family && font2.family) {
+          document.documentElement.classList.add('fonts-loaded')
+          sessionStorage.fontsLoaded = true
+        }
       }
     )
   }

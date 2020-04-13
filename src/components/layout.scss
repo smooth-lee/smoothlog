@@ -209,10 +209,6 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
-    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 맑은 고딕, 나눔고딕,
-    'Nanum Gothic', arial, 돋움, Dotum, Tahoma, Geneva, sans-serif;
-  -webkit-font-smoothing: antialiased;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -222,6 +218,12 @@ body {
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
 
+.fonts-loaded {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 맑은 고딕, 나눔고딕,
+    'Nanum Gothic', arial, 돋움, Dotum, Tahoma, Geneva, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
 img {
   max-width: 100%;
   margin-left: 0;
