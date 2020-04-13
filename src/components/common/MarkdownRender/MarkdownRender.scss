@@ -1,5 +1,7 @@
 .MarkdownRender {
   line-height: 30px;
+  word-break: keep-all;
+  text-align: justify;
 
   p,
   li {
