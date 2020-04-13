@@ -9,30 +9,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './layout.scss'
 import { HeaderContainer } from './common/Header'
-import FontFaceObserver from 'fontfaceobserver'
 
 const Layout = ({ children }) => {
-  if (typeof sessionStorage !== 'undefined') {
-    if (sessionStorage.fontsLoaded) {
-      const html = document.documentElement
-      html.classList.add('fonts-loaded')
-    } else {
-      document.documentElement.classList.add('blocking-time')
-      setTimeout(function() {
-        document.documentElement.classList.remove('blocking-time')
-      }, 400)
-      const font = new FontFaceObserver('Noto Sans KR')
-      const font2 = new FontFaceObserver('Noto Serif KR')
-
-      Promise.all([font.load(null, 3000), font2.load(null, 3000)]).then(
-        function() {
-          document.documentElement.classList.add('fonts-loaded')
-          sessionStorage.fontsLoaded = true
-        }
-      )
-    }
-  }
-
   return (
     <>
       <HeaderContainer />
