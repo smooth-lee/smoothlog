@@ -8,6 +8,14 @@ const TagList = () => {
   const tagList = data.allMarkdownRemark.group.reduce((acc, current) => {
     return { totalCount: acc.totalCount + current.totalCount }
   })
+  data.allMarkdownRemark.group.sort((a, b) => {
+    // 내림차순
+    return a.totalCount > b.totalCount
+      ? -1
+      : a.totalCount < b.totalCount
+      ? 1
+      : 0
+  })
   return (
     <ul className="TagList">
       {data.allMarkdownRemark.group.map(tagInfo => (
