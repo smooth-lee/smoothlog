@@ -8,7 +8,13 @@ import { HeaderSideTags } from '../HeaderSideTags'
 const HeaderSideMenu = ({ onToggle, isOpened }) => {
   return (
     <div className={`HeaderSideMenu ${isOpened ? 'is-side-menu-opened' : ''}`}>
-      <div className="side-menu-overlay" onClick={onToggle}></div>
+      <div
+        role="button"
+        tabIndex={0}
+        className="side-menu-overlay"
+        onClick={onToggle}
+        onKeyDown={onToggle}
+      />
       <div className="side-menu-slide">
         <div className="side-menu-content">
           <section className="side-menu-tags">
