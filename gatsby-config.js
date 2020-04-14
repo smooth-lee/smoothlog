@@ -11,6 +11,23 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Noto Sans KR', 'Noto Serif KR'],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-preload-fonts`,
+      options: {
+        // crossOrigin: `use-credentials`,
+        // OR
+        crossOrigin: pathname =>
+          pathname.match(/^\/elevated/) ? `use-credentials` : `anonymous`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-algolia`,
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
@@ -59,23 +76,6 @@ module.exports = {
               priority: 0.7,
             }
           }),
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Noto Sans KR', 'Noto Serif KR'],
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-preload-fonts`,
-      options: {
-        // crossOrigin: `use-credentials`,
-        // OR
-        crossOrigin: pathname =>
-          pathname.match(/^\/elevated/) ? `use-credentials` : `anonymous`,
       },
     },
     `gatsby-plugin-sass`,
