@@ -14,7 +14,7 @@ export const Comments = ({ repo }) => {
       src,
       repo,
       branch,
-      'issue-term': 'pathname',
+      'issue-term': 'title',
       crossorigin: 'anonymous',
       async: true,
     }
