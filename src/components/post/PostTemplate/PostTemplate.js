@@ -60,11 +60,9 @@ const PostTemplate = React.memo(props => {
           <PrevPost prevPost={prevPost} />
           <NextPost nextPost={nextPost} />
         </AnotherPostWrap>
-        {process.env.NODE_ENV === 'production' &&
-          setTimeout(
-            () => <Comments repo={'smoothlee7104/smoothlog-comments'} />,
-            1000
-          )}
+        {process.env.NODE_ENV === 'production' && (
+          <Comments repo={'smoothlee7104/smoothlog-comments'} />
+        )}
       </div>
     </Layout>
   )
