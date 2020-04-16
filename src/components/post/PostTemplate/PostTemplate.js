@@ -27,7 +27,6 @@ const PostTemplate = React.memo(props => {
     prevPost,
     nextPost,
   } = props.pageContext
-
   return (
     <Layout>
       <SEO
@@ -60,9 +59,8 @@ const PostTemplate = React.memo(props => {
           <PrevPost prevPost={prevPost} />
           <NextPost nextPost={nextPost} />
         </AnotherPostWrap>
-        {process.env.NODE_ENV === 'production' && (
-          <Comments repo={'smoothlee7104/smoothlog-comments'} />
-        )}
+
+        <Comments repo={'smoothlee7104/smoothlog-comments'} title={title} />
       </div>
     </Layout>
   )

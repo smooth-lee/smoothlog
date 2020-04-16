@@ -4,7 +4,7 @@ import './Comments.scss'
 const src = 'https://utteranc.es/client.js'
 const branch = 'master'
 
-export const Comments = ({ repo }) => {
+export const Comments = ({ repo, title }) => {
   const rootElm = React.createRef()
   // const darkMode = useDarkMode(false)
   // let theme = darkMode.value ? 'photon-dark' : 'github-light'
@@ -14,7 +14,7 @@ export const Comments = ({ repo }) => {
       src,
       repo,
       branch,
-      'issue-term': 'title',
+      'issue-term': title,
       crossorigin: 'anonymous',
       async: true,
     }
