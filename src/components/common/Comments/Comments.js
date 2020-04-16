@@ -25,5 +25,7 @@ export const Comments = ({ repo }) => {
     rootElm.current.appendChild(utterances)
   }, [])
 
-  return <div className="Comments" ref={rootElm} />
+  setTimeout(() => {
+    return <div className="Comments" ref={rootElm} />
+  }, 1000)
 }
