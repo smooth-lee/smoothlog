@@ -56,7 +56,7 @@ sudo service jenkins restart
 sudo systemctl status jenkins # 젠킨스 서버 상태 확인
 ```
 
-만약 jenkins 서버의 port를 변경하고 싶다면
+만약 jenkins 서버의 Port를 변경하고 싶다면 아래와 같이 진행한다.
 
 ```bash
 sudo vi /etc/default/jenkins
