@@ -60,7 +60,7 @@ const PostTemplate = React.memo(props => {
           <NextPost nextPost={nextPost} />
         </AnotherPostWrap>
 
-        <Comments repo={'smoothlee7104/smoothlog-comments'} title={title} />
+        <Comments repo={'smooth-lee/smoothlog-comments'} title={title} />
       </div>
     </Layout>
   )

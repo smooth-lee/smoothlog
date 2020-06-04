@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer className="footer">
-          ©<a href="https://github.com/smoothlee7104">smoothlog</a>, Built with
+          ©<a href="https://github.com/smooth-lee">smoothlog</a>, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>

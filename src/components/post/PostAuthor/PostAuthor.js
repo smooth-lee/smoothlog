@@ -11,8 +11,8 @@ const PostAuthor = ({ postDate, readingTime }) => {
       </div>
       <div className="author-desc">
         <div className="author-name">
-          <a href="https://github.com/smoothlee7104" target="_sub">
-            <span>SeungWoo Lee ( @smoothlee7104 )</span>
+          <a href="https://github.com/smooth-lee" target="_sub">
+            <span>SeungWoo Lee ( @smooth-lee )</span>
           </a>
         </div>
         <div className="author-post-date-info">

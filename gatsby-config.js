@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://smoothlog.com`,
     title: `smoothlog`,
     description: `소통하며 서로 배우는 공간, smoothlog`,
-    author: `@smoothlee7104`,
+    author: `@smooth-lee`,
   },
   plugins: [
     {
