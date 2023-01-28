@@ -17,11 +17,11 @@ const Header = ({ onToggle, isOpened }) => (
               <Link to="/">smoothlog</Link>
             </h1>
           </div>
-          <div className="header-search">
+          {/* <div className="header-search">
             <Link to="/search">
               <MdSearch />
             </Link>
-          </div>
+          </div> */}
           <div className="header-menu">
             <MdMenu onClick={onToggle} />
           </div>
